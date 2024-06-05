@@ -2,15 +2,39 @@ name: project-deployment-through-github-actions
 
 run-name: Project deployed by ${{ github.actor }}
 
+# Controls when the workflow will run
 on:
+    # Triggers the workflow on push or pull request events but only for the "main" and "dev" branch
     push:
       branches:    
         - main
         - dev
 
+    # Triggers the workflow on creating the pull request events but only for the "main" branch
+    pull_request:
+        branches: [ "main" ]
+        
+    # Allows you to run this workflow manually from the Actions tab
+    workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-    test_schedule:
+    build:
+        name: Build and Deploy
         runs-on: ubuntu-latest
         steps:
-          - name: Every time
-            run: echo "Deployment happening"
+            - name: Build and Deploy
+              uses: actions/checkout@v2
+            - name: Install Node.js
+              uses: actions/setup-node@v2
+              with:
+                node-version: '20'
+            - name: Install Dependencies
+              run: npm install
+            - name: Build
+              run: npm run build
+            - name: Build
+              run: npm run build
+            - name: print
+              run: echo "Done"
+              # Add your deployment command here
