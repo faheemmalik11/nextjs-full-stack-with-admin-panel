@@ -1,0 +1,1 @@
+# nextjs-full-stack-with-admin-panel
