@@ -1,0 +1,16 @@
+name: project-deployment-through-github-actions
+
+run-name: Project deployed by ${{ github.actor }}
+
+on:
+    push:
+      branches:    
+        - main
+        - dev
+
+jobs:
+    test_schedule:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Every time
+            run: echo "Deployment happening"
