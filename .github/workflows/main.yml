@@ -34,5 +34,5 @@ jobs:
             - name: Build
               run: npm run build
             - name: print
-              run: echo "Done"
+              run: echo "Compeleted"
               # Add your deployment command here
