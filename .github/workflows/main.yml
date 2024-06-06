@@ -29,11 +29,11 @@ jobs:
               uses: actions/setup-node@v2
               with:
                 node-version: '20'
-            - name: Install Dependencies
-              run: npm install
-            - name: Build
-              run: npm run build
+            # - name: Install Dependencies
+            #   run: npm install
+            # - name: Build
+            #   run: npm run build
             - name: Move Into Folder
-              run: cd /Users/faheemmalik/Documents/REACT Projects/nextjs-full-stack-with-admin-panel
+              run: cd /Users/faheemmalik/Documents
             - name: print
               run: echo "Compeleted"
