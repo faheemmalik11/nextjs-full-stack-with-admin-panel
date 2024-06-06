@@ -33,6 +33,7 @@ jobs:
               run: npm install
             - name: Build
               run: npm run build
+            - name: Move Into Folder
+              run: cd /Users/faheemmalik/Documents/REACT Projects/nextjs-full-stack-with-admin-panel
             - name: print
               run: echo "Compeleted"
-              # Add your deployment command here
